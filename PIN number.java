@@ -28,7 +28,7 @@ public class Main{
  System.exit(0);
  }
  }
- int flag=0,m=0;
+ int flag=0,m=0,c1=0;
  for(int k=0; k<n;k++){
  int one = (arr[k]/1000)%10;
  int two = (arr[k]/100)%10;
@@ -37,10 +37,18 @@ public class Main{
 
  if((one%2)!=0 && (two%2)==0 && ( three==2 || three==3 ||
 three==5 || three==7) && (four==4 || four==6 || four==8|| four==9)){
+  c1++;
  if(flag==0){
  System.out.println("Valid PIN numbers are");
  }
  System.out.println(arr[k]);
  flag=1;
  m++;
- }
+ }}
+  if(c1==0){
+   System.out.println("All these "+n+" numbers are not a valid PIN number");
+  }
+  else{
+   System.out.println(n+" is an invalid number");}
+ 
+  }}
